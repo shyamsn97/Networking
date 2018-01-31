@@ -87,7 +87,7 @@ def chat(df,sock,arp):
 
 	while choice == '1': #if you send to one peer
 		
-		t = Tru
+		t = True
 		print("Peers found by arp:") #print
 		print(arp)
 
