@@ -3,7 +3,8 @@ Exploring and utilizing Computer Network architecture
 <br/>
 ## Projects Included:
 <br/>
-### UDP-Dicovery-Chat
+UDP-Dicovery-Chat
+-------------------------------------------------------------------------------------------------------------------------------
 <br/>
 -UDP discovery using ARP and a UDP broadcast packet scanner. <br/>
 -UDP Chat program with unicast and broadcast capabilities. Instructions are displayed on the screen as user traverse the program. The program follows this general sequence: <br/>
