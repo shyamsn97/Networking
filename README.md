@@ -4,7 +4,7 @@ Exploring and utilizing Computer Network architecture
 ## Projects Included:
 
 ### UDP-Dicovery-Chat
-Requires python3
+Requires python3 <br>
 -UDP discovery using ARP and a UDP broadcast packet scanner. <br/>
 -UDP Chat program with unicast and broadcast capabilities. Instructions are displayed on the screen as user traverse the program. The program follows this general sequence: <br/>
     1) Runs arp and puts information in a nice Dataframe <br/>
