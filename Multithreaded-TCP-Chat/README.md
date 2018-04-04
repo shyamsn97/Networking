@@ -5,4 +5,4 @@
 
 ## Example: 
 <br/>
-![alt text](https://github.com/shyamsn97/Networking/blob/master/Multithreaded-TCP-Chat/test.png)
+![alt text](https://raw.githubusercontent.com/shyamsn97/Networking/master/Multithreaded-TCP-Chat/test.png)
