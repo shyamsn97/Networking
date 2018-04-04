@@ -13,7 +13,7 @@ sources = [cap.source for cap in cap]
 
 df = pd.DataFrame({"sources":sources,"destinations":destinations,"protocols":protocols})
 #We'll exclude arp commands
-df = df.iloc[np.where(df["protocols"] != "ARP")]
+df = df.iloc[np.where(df["protocols"] != "ARP")]	
 graph = list(dict(zip(df["sources"],df["destinations"])).items())
 
 def draw_graph(graph, labels=None,
