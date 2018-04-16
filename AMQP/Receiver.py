@@ -7,7 +7,7 @@ import networkx as nx
 import seaborn as sns
 
 
-class Reciever():
+class Receiver():
 
 	def __init__(self,host,arg):
 		self.host = host
