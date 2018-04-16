@@ -28,9 +28,9 @@ class Receiver():
 		result = channel.queue_declare(exclusive=True)
 		queue_name = result.method.queue
 
+		#if you dont include any keys
 		if not binding_keys:
-		    sys.stderr.write("Usage: %s [binding_key]...\n" % self.default)
-		    sys.exit(1)
+			binding_keys = ["#"]
 
 		for binding_key in binding_keys:
 		    channel.queue_bind(exchange='topics',
@@ -73,5 +73,5 @@ class Receiver():
 
 if __name__ == "__main__":
 	print("WELCOME")
-	recieve = Reciever('127.0.0.1',sys.argv)
+	recieve = Receiver('127.0.0.1',sys.argv)
 	recieve.start()
