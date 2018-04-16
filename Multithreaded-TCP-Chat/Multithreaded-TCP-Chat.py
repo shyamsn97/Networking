@@ -42,7 +42,7 @@ class MTCP_Server(Thread):
 				client.settimeout(120)
 				self.clients.add(client)
 				self.addresses.append(addr)
-				t = Thread(target= self.listento, args=(client,addr,(len(self.addresses)-1)))
+				t = Thread(target = self.listento, args=(client,addr,(len(self.addresses)-1)))
 				t.start()
 				self.threadlist.add(t)
 			except KeyboardInterrupt:
@@ -57,12 +57,12 @@ class MTCP_Server(Thread):
 				data = client.recv(size)
 				print("ip,port)" + str(addr) + " user# " + str(usernumber) + " sent: " + data.decode('utf-8'))
 				if data:
-					response = input("Respond to (ip,port) " + str(addr) + " user# " + str(usernumber) + " :\n")
-					# if int(response) == 0:
-					# 	response = input("Send to all users:\n ")
-					# 	for c in self.clients:
-					# 		c.sendall(response)
-					client.send(response.encode('utf-8'))
+					response = "Respond to (ip,port) " + str(addr) + " user# " + str(usernumber) + " :\n"
+					response = input("Send to all users:\n ")
+					for c in self.clients:
+						print(c)
+						c.send(response.encode('utf-8'))
+					# client.send(response.encode('utf-8'))
 				else:
 					raise error('Client disconnected')
 			except:

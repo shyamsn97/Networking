@@ -1,6 +1,6 @@
 from socket import *
 
-TCP_IP = '10.2.57.149 '
+TCP_IP = '127.0.0.1'
 
 TCP_PORT = 1337
 

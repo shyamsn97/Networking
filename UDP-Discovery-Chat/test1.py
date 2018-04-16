@@ -15,5 +15,6 @@ while True:
 	print(r[1])
 	reply = "yo"
 	client_address = r[1]
+	print(r[1])
 	s.sendto(reply.encode('utf-8'), client_address)  
 	print("sent")
