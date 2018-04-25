@@ -1,0 +1,2 @@
+# Distributed Machine Learning
+This project will use a multithreaded TCP socket server to create an emulated distributed platform, using the power of many user machines to complete machine learning tasks. A user can send a file such as a csv and an algorithm like "kmeans". The file will be split into equal parts to be distributed to the clients, who will run the algorithm on their portion of the data, and send it back to the main server, which will then return it to the original user
