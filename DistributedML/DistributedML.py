@@ -24,7 +24,7 @@ class DistributedML(Thread):
 		self.mainclient = 0
 		self.counter = 0
 		self.progress = 0
-		print("Listening on port: " + str(port))
+		print("Listening on ip and port: " + str(self.s.getsockname()))
 
 	def start(self):
 		self.s.listen(5)
@@ -116,7 +116,7 @@ class DistributedML(Thread):
 					elif data[0].decode('utf-8') == "finished_task":
 						print("Client: " + str(client) + " Finished Task!")
 						self.piecetogether(pickle.loads(data[1]))
-						print("Progress: " + str(self.progress/(len(list(self.clients.values())) - 1)) + "%")
+						print("Progress: " + str(100*self.progress/(len(list(self.clients.values())) - 1)) + "%")
 
 			except:
 				print("Client: " + str(client) + " disconnected!")

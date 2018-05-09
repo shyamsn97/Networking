@@ -43,7 +43,8 @@ class Client():
 		prediction = []
 		matrix = pickle.loads(data[1])
 		algo = data[2].decode('utf-8')
-
+		print("Portion of data: ")
+		print(matrix)
 		if algo == "kmeans":
 			k = KMeans(n_clusters=3)	
 			k.fit(matrix)
