@@ -116,7 +116,8 @@ class DistributedML(Thread):
 					elif data[0].decode('utf-8') == "finished_task":
 						print("Client: " + str(client) + " Finished Task!")
 						self.piecetogether(pickle.loads(data[1]))
-						print("Progress: " + str(100*self.progress/(len(list(self.clients.values())) - 1)) + "%")
+						print("Progress: ")
+						print(str(100*self.progress/(len(list(self.clients.values())) - 1)) + "%")
 
 			except:
 				print("Client: " + str(client) + " disconnected!")
